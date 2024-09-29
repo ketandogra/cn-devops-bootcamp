@@ -4,12 +4,14 @@ pipeline {
 
     stage('Install Dependencies') {
       steps {
+        cd 'devops_day1'
         bat 'npm install'
       }
 
     }
     stage('Run Tests') {
       steps {
+        cd 'devops_day1'
         bat 'npm test'
       }
 
